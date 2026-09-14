@@ -1,0 +1,148 @@
+{
+  "capsolver_api_key": "CAP-XXXXXXXX",
+  "imap": {
+    "host": "imap.example.com",
+    "port": 993,
+    "user": "postfach@example.com",
+    "password": "",
+    "sender_filter": "",
+    "match_recipient": false
+  },
+  "artist_id": "28400196-01ba-4920-810b-9592f9f1045d",
+  "page_id": "b4356f65-bdc5-4dd6-84a8-36369f15b9a8",
+  "return_url": "https://oasis.hq.fan/registration",
+  "channel_name": "Register for Oasis Live '27",
+  "tags": [
+    "welcome",
+    "signup-live-27-registration"
+  ],
+  "recaptcha": {
+    "site_key": "6LcMjSsqAAAAANqPn-O5M5wUDtJm-Zjx2d3NtWTp",
+    "action": "submit"
+  },
+  "polls": {
+    "cities": {
+      "pollId": "e0f2f14d-daed-4afb-978b-dc38f2164e01",
+      "pick": 3,
+      "preferencePollIds": [
+        "f3f3fdeb-20d7-4bd1-b84d-c7545886a904",
+        "03890a33-7440-470e-b5a4-d12133d01a99"
+      ],
+      "options": [
+        {
+          "venue": "Glasgow",
+          "location": "UK",
+          "pollAnswerId": "5202df3d-3bd5-44e2-a9da-66c254beab68",
+          "preferencePollAnswerIds": [
+            "83923b31-1da3-4df0-a6c5-d787a09a820c",
+            "734c06e9-4659-488b-9375-081566ca531e"
+          ]
+        },
+        {
+          "venue": "Manchester",
+          "location": "UK",
+          "pollAnswerId": "ecfb4675-0a0b-4733-b3c3-83fc13e0d058",
+          "preferencePollAnswerIds": [
+            "30c3fc48-4797-49dd-8eeb-61f9bfd333c3",
+            "7dc7f340-f7fa-447d-8707-c02b26198613"
+          ]
+        },
+        {
+          "venue": "Munich",
+          "location": "DE",
+          "pollAnswerId": "3c323b27-d021-457b-b6e7-1aee96d217f5",
+          "preferencePollAnswerIds": [
+            "3633ae5b-3186-46cb-9d47-ce7e05fff83b",
+            "1b72369c-d0f6-4d6a-9ef0-d2428897b3dc"
+          ]
+        },
+        {
+          "venue": "Barcelona",
+          "location": "ES",
+          "pollAnswerId": "78749329-a3a0-41b3-98db-fa92a280e84c",
+          "preferencePollAnswerIds": [
+            "9152834d-bc18-47d9-aa70-3cd1aea8f5d8",
+            "e337a95d-5613-4144-ad6e-0863f801ebe2"
+          ]
+        },
+        {
+          "venue": "Amsterdam",
+          "location": "NL",
+          "pollAnswerId": "31b298b8-13be-4b9d-b125-88bc4351a28d",
+          "preferencePollAnswerIds": [
+            "73d57077-1e37-4f8a-a479-ff20b935779f",
+            "d0471262-6c13-483f-99aa-b2c368b20a61"
+          ]
+        },
+        {
+          "venue": "Paris",
+          "location": "FR",
+          "pollAnswerId": "c448ca76-bd1d-459a-8452-f4e02c56385a",
+          "preferencePollAnswerIds": [
+            "e0220078-8499-47cf-b363-d2dfa1728767",
+            "cb9c2872-9174-4c61-9d62-2f385a613317"
+          ]
+        },
+        {
+          "venue": "Rome",
+          "location": "IT",
+          "pollAnswerId": "0d901162-1406-44c7-af3f-872d3a247ab0",
+          "preferencePollAnswerIds": [
+            "3eb10d46-b7fc-49af-a8f2-950d2eeacd88",
+            "e0d0b576-5e3e-4a3e-ae50-fbbdebc4b173"
+          ]
+        },
+        {
+          "venue": "Boston",
+          "location": "US",
+          "pollAnswerId": "82e76cdd-7b13-4ecb-9df3-fd4fcb247475",
+          "preferencePollAnswerIds": [
+            "5313e3d3-8b03-4190-a7f2-9d36b4b20882",
+            "5ace1a43-dbeb-464e-a382-dccfce121bd3"
+          ]
+        },
+        {
+          "venue": "Las Vegas",
+          "location": "US",
+          "pollAnswerId": "9b46b5ec-72c1-4ac7-883b-10f64ad2b4cd",
+          "preferencePollAnswerIds": [
+            "4570d616-9c56-4cf0-957b-e520194d8ea6",
+            "39082884-963e-4dd1-8f42-39f1c5f0716f"
+          ]
+        },
+        {
+          "venue": "Slane",
+          "location": "IE",
+          "pollAnswerId": "a7425d69-872e-4451-9d45-5b307f1220e6",
+          "preferencePollAnswerIds": [
+            "8049cf4c-5f07-446e-8ff1-d7282a5ad7fa",
+            "6d88dea0-2b06-4ff9-ba46-53f00f63bc8d"
+          ]
+        },
+        {
+          "venue": "Knebworth",
+          "location": "UK",
+          "pollAnswerId": "e9f6e585-adaf-44e3-9233-ed5eeb67db3c",
+          "preferencePollAnswerIds": [
+            "c4c3fcdd-9d22-4257-a7d3-acdb8e5e1a43",
+            "7ec1fb94-2219-4ed5-9b6a-dd2784ae4570"
+          ]
+        }
+      ]
+    },
+    "fixed": [
+      {
+        "pollId": "d9ec070f-2bb0-4e83-a64d-0b2451ac2252",
+        "pollAnswerIds": [
+          "62777823-211b-4436-803e-2ba57f735fa5"
+        ]
+      },
+      {
+        "pollId": "47ea91f1-5f0f-4556-8d32-db7b22f43ade",
+        "pollAnswerIds": [
+          "c107232e-b35c-4f40-bf45-ba74018a43fe"
+        ]
+      }
+    ]
+  }
+}
