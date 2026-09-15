@@ -9,7 +9,8 @@
     "user": "postfach@example.com",
     "password": "",
     "sender_filter": "",
-    "match_recipient": false,
+    "scan_all_folders": true,
+    "exclude_folders": [],
     "poll_interval_ms": 5000,
     "wait_timeout_ms": 180000
   },

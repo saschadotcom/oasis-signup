@@ -154,6 +154,7 @@ async function runTask(row, proxy, config) {
       overrides: imapOverrides(row),
       timeout: config.imap?.wait_timeout_ms,
       onWarn: (msg) => log.warn(`[${email}] ${msg}`),
+      onInfo: (msg) => log.info(`[${email}] ${msg}`),
     });
     log.success(`[${email}] Verification link received`);
 

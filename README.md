@@ -41,6 +41,30 @@ Nur zwei Dinge musst du eintragen:
 Alles andere in der Datei (Artist-/Page-IDs, Städte-Liste, Umfrage-Antworten) ist
 bereits korrekt für Oasis voreingestellt und muss nicht angefasst werden.
 
+#### Welche Ordner durchsucht werden
+
+Standardmäßig fragt das Tool beim Start den IMAP-Server, welche Ordner es gibt,
+und durchsucht **alle** davon – also auch Junk/Spam, Papierkorb, Archiv und
+eigene Ordner. Nur Entwürfe und Gesendet werden übersprungen. Beim Start steht
+in der Ausgabe, welche Ordner abgedeckt sind (`Watching N IMAP folder(s): …`).
+
+Das ist wichtig, weil Bestätigungsmails – besonders bei Weiterleitungen oder
+umgeschriebenen Links (Outlook Safe Links) – oft nicht in der INBOX landen.
+
+Anpassen kannst du das über drei optionale Felder in `imap`:
+
+- **`exclude_folders`** – Ordner, die übersprungen werden sollen, z. B.
+  `["Archiv", "[Gmail]/All Mail"]`. Bei Gmail lohnt sich das, weil „Alle
+  Nachrichten" jede Mail ein zweites Mal enthält und damit doppelt geladen wird.
+- **`folders`** – wenn gesetzt, wird **ausschließlich** diese Liste durchsucht,
+  z. B. `["INBOX", "Junk Email"]`.
+- **`scan_all_folders": false`** – zurück zum alten Verhalten, nur `mailbox`
+  (Standard `INBOX`).
+
+Außerdem gilt: ist **`sender_filter`** gesetzt, wird nur der `From`-Header
+geprüft. Bei weitergeleiteten Mails steht dort der Weiterleiter und nicht mehr
+`oasis@openstageit.com` – solche Mails fallen dann raus. Im Zweifel leer lassen.
+
 ### `input.csv`
 
 Eine Zeile pro Person. Pflichtspalten: `Email`, `FirstName`, `LastName`,
