@@ -3,13 +3,15 @@
   "version": "3.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "browser": "node browser.js"
   },
   "dependencies": {
     "axios": "^1.7.7",
     "csv-parse": "^5.5.6",
     "imapflow": "^1.0.164",
     "mailparser": "^3.7.1",
-    "node-tls-client": "^2.1.0"
+    "node-tls-client": "^2.1.0",
+    "puppeteer-core": "^24.43.1"
   }
 }
