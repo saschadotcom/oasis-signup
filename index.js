@@ -16,6 +16,12 @@ function loadConfig() {
   return JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json'), 'utf8'));
 }
 
+// Sentinel lines that mean "use the local/direct connection, no proxy". Handy
+// for mixing a direct connection into the rotation or running fully direct
+// without emptying proxies.txt. A real local proxy (e.g. localhost:8080) still
+// works because it carries a port and won't match these bare keywords.
+const DIRECT_PROXY = new Set(['localhost', 'local', 'direct', 'none', 'no-proxy']);
+
 function loadProxies() {
   const file = path.join(__dirname, 'proxies.txt');
   if (!fs.existsSync(file)) return [];
@@ -24,6 +30,7 @@ function loadProxies() {
     .map(l => l.trim())
     .filter(l => l && !l.startsWith('#'))
     .map(line => {
+      if (DIRECT_PROXY.has(line.toLowerCase())) return null; // direct connection
       const parts = line.split(':');
       return { host: parts[0], port: parts[1], user: parts[2] || '', pass: parts[3] || '' };
     });
