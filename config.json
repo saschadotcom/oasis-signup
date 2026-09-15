@@ -1,12 +1,17 @@
 {
   "capsolver_api_key": "CAP-XXXXXXXX",
+  "capsolver_use_proxy": true,
+  "max_concurrent_tasks": 5,
+  "delay_between_tasks_ms": 2000,
   "imap": {
     "host": "imap.example.com",
     "port": 993,
     "user": "postfach@example.com",
     "password": "",
     "sender_filter": "",
-    "match_recipient": false
+    "match_recipient": false,
+    "poll_interval_ms": 5000,
+    "wait_timeout_ms": 180000
   },
   "artist_id": "28400196-01ba-4920-810b-9592f9f1045d",
   "page_id": "b4356f65-bdc5-4dd6-84a8-36369f15b9a8",
@@ -18,7 +23,7 @@
   ],
   "recaptcha": {
     "site_key": "6LcMjSsqAAAAANqPn-O5M5wUDtJm-Zjx2d3NtWTp",
-    "action": "submit"
+    "action": "fan_verification"
   },
   "polls": {
     "cities": {

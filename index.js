@@ -92,8 +92,12 @@ function isRetryable(err) {
   return false; // other 4xx (e.g. 400 bad data) won't fix itself on retry
 }
 
-// Failures worth blaming on the proxy IP (blocked / throttled / dead).
+// Failures worth blaming on the proxy IP (blocked / throttled / dead). Mail and
+// CapSolver problems are explicitly excluded so a flaky inbox or solver doesn't
+// bench otherwise-healthy proxies (which would snowball into more failures).
 function isProxyFault(err) {
+  if (err.kind === 'mail') return false;
+  if (/^CapSolver/i.test(err.message || '')) return false;
   const s = err.status;
   if (s === undefined || s === null) return true;
   return s === 0 || s === 403 || s === 429 || s >= 500;
