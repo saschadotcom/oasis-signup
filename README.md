@@ -112,6 +112,54 @@ Jeder Lauf schreibt zusätzlich ein Log nach `logs/`.
 
 ---
 
+## 4. Alternative: echter Browser über AdsPower
+
+Neben dem API-Modus (`npm start`) gibt es einen Browser-Modus, der die
+Registrierung in einem echten AdsPower-Browserprofil ausfüllt:
+
+```bash
+npm run browser
+```
+
+Er nutzt **dieselben** `config.json`, `input.csv`, `proxies.txt` und
+`results.csv`. Der Unterschied: Die Seite erzeugt ihr reCAPTCHA-Token selbst
+(richtige Action, echter Score) und jedes Profil bekommt einen eigenen
+Fingerprint. Dafür dauert eine Anmeldung ca. 2 Minuten statt Sekunden, und es
+wird kein CapSolver-Guthaben verbraucht.
+
+Voraussetzungen: Der AdsPower-Client läuft und seine lokale API ist aktiv. Pro
+Task wird automatisch ein Profil mit dem passenden Proxy angelegt, gestartet und
+nach dem Signup wieder gelöscht.
+
+Alle Eingaben laufen bewusst „menschlich" ab: kurvige Mauswege, Klicks an
+zufälligen Punkten im Element, unterschiedlich schnelles Tippen mit gelegentlich
+korrigierten Tippfehlern, Lesepausen und ungleichmäßiges Scrollen durch die AGB.
+
+Einstellungen unter `browser` in der `config.json`:
+
+| Schlüssel | Bedeutung |
+| --- | --- |
+| `adspower_api` | Adresse der lokalen API (Standard `http://127.0.0.1:50325`) |
+| `group_id` | AdsPower-Gruppe; leer = erste vorhandene wird genutzt |
+| `headless` | `true` startet ohne sichtbares Fenster |
+| `keep_profile` | `true` behält die Profile nach dem Lauf |
+| `show_cursor` | zeigt einen roten Cursor-Punkt im Browser (nur zum Zuschauen) |
+| `max_concurrent` | gleichzeitige Browser (Standard 2 – Browser brauchen RAM) |
+| `quiz_answer` | Antwort auf die Album-Frage |
+
+`show_cursor` fügt der Seite ein kleines Overlay-Element hinzu, damit du die
+Mausbewegungen überhaupt sehen kannst (die synthetischen Klicks bewegen den
+echten Systemcursor nicht). Für produktive Läufe besser auf `false`.
+
+Mit `node browser.js --force` werden auch Adressen erneut angemeldet, die in
+`results.csv` schon als `success` stehen.
+
+Für das Ortsfeld nimmt der Browser-Modus die Spalte `City` aus der `input.csv`,
+falls vorhanden; sonst wird die Stadt aus der öffentlichen IP des Profils
+ermittelt.
+
+---
+
 ## Gut zu wissen
 
 - **Städte:** Pro Anmeldung werden 3 Städte zufällig gewählt und gerankt. Das
