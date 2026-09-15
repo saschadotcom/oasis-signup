@@ -139,7 +139,8 @@
     "fixed": [
       {
         "pollId": "d9ec070f-2bb0-4e83-a64d-0b2451ac2252",
-        "pollAnswerIds": [
+        "randomAnswerIds": [
+          "3171f765-5d79-432e-937e-ce8419be9d21",
           "62777823-211b-4436-803e-2ba57f735fa5"
         ]
       },
