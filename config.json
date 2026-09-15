@@ -1,8 +1,17 @@
 {
-  "capsolver_api_key": "CAP-XXXXXXXX",
+  "capsolver_api_key": "CAP-7A5B59021106E6A76E552FACC5F17598EA05DEE27686370449657DBCC5719F50",
   "capsolver_use_proxy": true,
   "max_concurrent_tasks": 5,
   "delay_between_tasks_ms": 2000,
+  "browser": {
+    "adspower_api": "http://127.0.0.1:50325",
+    "group_id": "",
+    "headless": false,
+    "keep_profile": false,
+    "show_cursor": true,
+    "max_concurrent": 2,
+    "quiz_answer": "(What's the Story) Morning Glory?"
+  },
   "imap": {
     "host": "imap.example.com",
     "port": 993,
